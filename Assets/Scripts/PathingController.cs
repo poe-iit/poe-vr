@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Management;
 
 public class PathingController : MonoBehaviour
 {
@@ -24,10 +25,21 @@ public class PathingController : MonoBehaviour
     public int framesPerPathSequenceState = 30;
     public float pathLightRange = 2.0f;
     public float nonpathLightRange = 6.0f;
+    public bool VRMode = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        if (VRMode is false)
+        {
+            XRGeneralSettings.Instance.Manager.DeinitializeLoader();
+        }
+        else
+        {
+            XRGeneralSettings.Instance.Manager.InitializeLoader();
+        }
+
         pathGameObjects = GameObject.FindGameObjectsWithTag("path_object");
         pathObjects = new PathObject[pathGameObjects.Length];
         for (int i = 0; i < pathObjects.Length; i++)
