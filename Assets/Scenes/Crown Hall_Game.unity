@@ -1856,7 +1856,7 @@ MonoBehaviour:
   height: 2
   repathRate: 0.5
   canSearch: 1
-  canMove: 1
+  canMove: 0
   maxSpeed: 1
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
@@ -1864,7 +1864,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   centerOffsetCompatibility: NaN
   orientation: 0
-  enableRotation: 1
+  enableRotation: 0
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
@@ -3288,7 +3288,7 @@ MonoBehaviour:
   runningSpeed: 11.5
   jumpSpeed: 8
   gravity: 20
-  playerCamera: {fileID: 0}
+  playerCamera: {fileID: 440095026}
   lookSpeed: 2
   lookXLimit: 45
   canMove: 1
@@ -3310,6 +3310,11 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!20 &440095026 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 20674474951007674, guid: 2abf19653d633114faedf3b60dc6c39f, type: 3}
+  m_PrefabInstance: {fileID: 417747110}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &445530476 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c277444d146e84c439bd4abf0f0c481b, type: 3}
